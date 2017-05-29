@@ -1,15 +1,16 @@
-<h1>
-  {{title}}
-</h1>
 
 <div *ngIf="data">
   <div *ngFor="let object of data.forms">
     <span>{{object.question}}</span>
-
-    <ul *ngIf="object.type == 'RADIO'">
+    <ol *ngIf="object.type == 'RADIO'" type="a">
       <li *ngFor="let option of object.options">
         <input type="{{object.type}}" name="{{object.form_id}}" [value]="option.value">{{option.display}}
       </li>
-    </ul>
+    </ol>
+    <ol *ngIf="object.type == 'CHECK_BOX'" type="a">
+      <li *ngFor="let option of object.options">
+        <input type="checkbox" name="{{object.form_id}}" [value]="option.value">{{option.display}}
+      </li>
+    </ol>
   </div>
 </div>

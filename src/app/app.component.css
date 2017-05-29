@@ -1,0 +1,24 @@
+#page-wrap { width: 808px; margin: 0 auto; }
+
+#survey input {
+    vertical-align: middle;
+}
+#survey span{
+    margin-left: 2%;
+}
+
+#survey ol {
+   margin: 0 0 10px 20px;
+}
+
+#survey ol li {
+   margin: 0 0 20px 0;
+}
+
+#survey ol li div {
+   padding: 4px 0;
+}
+
+#survey h3 {
+   font-size: 17px; margin: 0 0 1px 0; color: #289;
+}

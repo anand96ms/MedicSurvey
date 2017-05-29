@@ -8,7 +8,6 @@ import {ApiService} from './services/api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
   data = null;
   constructor(private _api : ApiService){
     this.getData();
@@ -17,8 +16,7 @@ export class AppComponent {
   getData(){
     this._api.getData()
     .subscribe((data) => {
-      console.log(data);
-      this.data = data.data;
+    this.data = data.data;
     })
 
   }

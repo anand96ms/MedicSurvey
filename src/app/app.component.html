@@ -1,10 +1,10 @@
 
-<div *ngIf="data">
-  <div *ngFor="let object of data.forms">
-    <span>{{object.question}}</span>
+<div *ngIf="data" id="page-wrap">
+  <div *ngFor="let object of data.forms" id="survey">
+    <h3><ul type="1"><li><p>{{object.question}}</p></li></ul></h3>
     <ol *ngIf="object.type == 'RADIO'" type="a">
       <li *ngFor="let option of object.options">
-        <input type="{{object.type}}" name="{{object.form_id}}" [value]="option.value">{{option.display}}
+        <input type="{{object.type}}" name="{{object.form_id}}" [value]="option.value"><span>{{option.display}}</span>
       </li>
     </ol>
     <ol *ngIf="object.type == 'CHECK_BOX'" type="a">

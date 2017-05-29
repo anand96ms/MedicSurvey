@@ -17,8 +17,7 @@ getData(){
               .catch(this.handleError);
   }
 
-private extractData(res: Response) {
-    
+private extractData(res: Response) {  
     return res.json();
   }
 

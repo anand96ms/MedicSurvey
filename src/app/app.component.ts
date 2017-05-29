@@ -9,14 +9,16 @@ import {ApiService} from './services/api.service';
 })
 export class AppComponent {
   data = null;
+  success=false;
   constructor(private _api : ApiService){
     this.getData();
   }
 
   getData(){
     this._api.getData()
-    .subscribe((data) => {
-    this.data = data.data;
+    .subscribe((response) => {
+    this.data = response.data;
+    this.success=response.success
     })
 
   }

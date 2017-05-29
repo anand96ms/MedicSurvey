@@ -1,3 +1,15 @@
 <h1>
   {{title}}
 </h1>
+
+<div *ngIf="data">
+  <div *ngFor="let object of data.forms">
+    <span>{{object.question}}</span>
+
+    <ul *ngIf="object.type == 'RADIO'">
+      <li *ngFor="let option of object.options">
+        <input type="{{object.type}}" name="{{object.form_id}}" [value]="option.value">{{option.display}}
+      </li>
+    </ul>
+  </div>
+</div>

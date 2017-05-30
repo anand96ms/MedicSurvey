@@ -12,5 +12,11 @@
         <input type="checkbox" name="{{object.form_id}}" [value]="option.value">{{option.display}}
       </li>
     </ol>
+    <ol *ngIf="object.type == 'SELECT'" type="a">
+      <select>
+    <option value="" selected disabled>Select any one</option>
+    <option *ngFor="let item of object.options" [ngValue]="item.value">{{item.display}}</option>
+</select>
+    </ol>
   </div>
 </div>

@@ -18,6 +18,9 @@
 #survey ol li div {
    padding: 4px 0;
 }
+#survey select{
+    width: 58%;
+}
 
 #survey h3 {
    font-size: 17px; margin: 0 0 1px 0; color: #289;
